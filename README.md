@@ -15,13 +15,13 @@
 
 ## Development
 
-The best way to run these competition scripts is to launch a hatch shell:
+The best way to run these scripts is to launch a hatch shell:
 
 ```console
 > hatch shell
 ```
 
-once the shell is up and running you can run the individual competitions:
+once the shell is up and running you can run the individual scripts:
 
 ```console
 > python -m competitions.titanic.titanic_glm
