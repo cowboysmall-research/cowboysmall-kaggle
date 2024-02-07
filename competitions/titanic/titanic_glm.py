@@ -15,11 +15,21 @@ data = pd.read_csv("../../data/titanic/train.csv")
 data.head()
 
 
-# %% 0 - 
+# %% 0 - convert columns to categories / factors
 data['Pclass']   = data['Pclass'].astype('category')
 data['Sex']      = data['Sex'].astype('category')
 data['Embarked'] = data['Embarked'].astype('category')
 # data.dtypes
+
+
+
+# %% 0 - remove punctuation, etc. from name
+data['Name'] = data['Name'].apply(lambda n: " ".join([v.strip(",()[].\"'") for v in n.split(" ")]))
+
+
+# %% 0 - 
+data['Ticket_No'] = data['Ticket'.apply(lambda t: t.split(" ")[-1])]
+
 
 
 # %% 0 - 
